@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "liminal-chill"
+version = "0.1.0"
+description = "A calm low-poly liminal space to explore with Pygame and OpenGL"
+requires-python = ">=3.10"
+dependencies = [
+    "pygame>=2.6,<3",
+    "PyOpenGL>=3.1.7,<4",
+]
+
+[project.scripts]
+liminal-chill = "liminal_chill.app:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
