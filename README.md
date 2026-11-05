@@ -1,41 +1,12 @@
-# Hallway 95
+# Dos proyectos de exploración 3D
 
-Un punto de partida inspirado en **3D Maze** de Windows 95, hecho con Python, Pygame y PyOpenGL. Por ahora incluye un laberinto aleatorio, paredes de ladrillo, piso y techo texturizados, una cámara con recorrido automático y exploración manual.
+Este repositorio contiene dos aplicaciones independientes hechas con **Python, Pygame y PyOpenGL**:
 
-## Ejecutar
+| Proyecto | Ambiente | Inicio |
+| --- | --- | --- |
+| [church-horror](church-horror/README.md) | Iglesia oscura de inspiración ortodoxa | `python -m church_horror` |
+| [liminal-chill](liminal-chill/README.md) | Espacio liminal tranquilo con salas pastel y estanque | `python -m liminal_chill` |
 
-Requiere Python 3.10 o posterior y una computadora con OpenGL compatible con el perfil clásico.
+Cada carpeta tiene su propio `pyproject.toml`, paquete `src`, pruebas y README. Las escenas principales usan OpenGL 3.3 Core con shaders, VBO, VAO y matrices explícitas. Instala cada una desde su carpeta con `python -m pip install -e .`, preferiblemente en un entorno virtual propio. Los comandos completos están en los README de cada proyecto.
 
-```powershell
-python -m venv .venv
-.\.venv\Scripts\Activate.ps1
-python -m pip install -e .
-python -m hallway95
-```
-
-Para repetir el mismo laberinto: `python -m hallway95 --seed 95`.
-
-La prueba de generación se ejecuta con `python -m unittest discover -s tests`.
-
-El proyecto desactiva `OpenGL_accelerate`, que es opcional, para evitar fallos cuando esa extensión instalada no coincide con PyOpenGL. No hace falta reinstalar el proyecto tras modificar archivos en una instalación editable (`pip install -e .`).
-
-## Controles
-
-| Tecla | Acción |
-| --- | --- |
-| Espacio | Alternar recorrido automático y manual |
-| W / S o flechas arriba / abajo | Avanzar / retroceder en modo manual |
-| A / D | Desplazarse lateralmente en modo manual |
-| Flechas izquierda / derecha | Girar en modo manual |
-| R | Crear otro laberinto |
-| Esc | Salir |
-
-## Estructura
-
-- `maze.py`: generación y datos del laberinto, sin dependencias gráficas.
-- `navigation.py`: cámara, recorrido automático y movimiento manual.
-- `renderer.py`: texturas y dibujo con OpenGL clásico.
-- `app.py`: ventana, eventos y bucle de Pygame.
-- `config.py`: valores ajustables del prototipo.
-
-El renderizador usa la API fija de OpenGL para mantener el aspecto de la época y facilitar el primer prototipo. El modelo del laberinto y la navegación están separados para permitir cambiar el renderizador más adelante.
+La instalación editable anterior de `hallway95` en la raíz ya no corresponde a esta estructura; instala los nuevos paquetes antes de ejecutarlos.
