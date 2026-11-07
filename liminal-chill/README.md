@@ -2,6 +2,8 @@
 
 Un espacio liminal tranquilo y recorrible con estética 3D noventera: tres salas conectadas, columnas repetidas, baldosas claras, paneles luminosos y un estanque turquesa. No hay enemigos ni objetivos; la primera versión se centra en pasear y observar el ambiente.
 
+También puedes iniciarlo desde el [menú principal](../README.md) con `python menu.py` en la raíz del repositorio.
+
 ## Instalar y ejecutar
 
 Desde PowerShell, con Python 3.10 o posterior y un controlador compatible con **OpenGL 3.3 Core**:

@@ -2,6 +2,8 @@
 
 Exploración libre de una iglesia oscura, con estética 3D de los años 90. La escena principal incluye una nave, columnas, vitrales apagados, iconostasio, iconos geométricos, cruz, candelabros y luz inestable. El antiguo laberinto permanece como prototipo opcional.
 
+También puedes iniciarla desde el [menú principal](../README.md) con `python menu.py` en la raíz del repositorio.
+
 ## Instalar y ejecutar
 
 Desde PowerShell, con Python 3.10 o posterior y un controlador compatible con **OpenGL 3.3 Core**:
